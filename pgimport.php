@@ -19,7 +19,7 @@
 	}
 	
 	try {
-		$dsn = "pgsql:host={$cmd['H']};port=5432;dbname={$cmd['d']};";
+		echo $dsn = "pgsql:host={$cmd['H']};port=5432;dbname={$cmd['d']};";
 		$pdo = new PDO($dsn, $cmd['u'], $cmd['p'], [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 		$statement = $pdo->query($sql);
 		
